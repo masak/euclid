@@ -54,6 +54,11 @@
 
     canvas.addEventListener("mouseup", function(event) {
         mouseIsDown = false;
+
+        setTimeout(function() {
+            squiggles.shift();
+            draw();
+        }, 3000);
     }, false);
 
     canvas.addEventListener("mousemove", function(event) {
